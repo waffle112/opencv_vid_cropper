@@ -153,6 +153,7 @@ def human_recog(file):
     boxFrames = []
     boundboxes = []
     frame_num = 0
+    padbox = [0,0,0,0]
     while True:
         print("converting - Frame " + str(frame_num) + "/" + str(totalframes), end='\r')
         frame_num += 1
@@ -240,7 +241,7 @@ def human_recog(file):
 
     cap.release()
     cv2.destroyAllWindows()
-
+    return 1
 
 if __name__ == "__main__":
     file = "videos/dance_test.gif"
